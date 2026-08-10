@@ -1948,6 +1948,14 @@ function goSubject(id){
 document.addEventListener('DOMContentLoaded',buildArabicAcademy);
 
 </script>
-
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(() => console.log("EduUfuq is ready!"))
+            .catch(error => console.log("Service Worker error:", error));
+    });
+}
+</script>
 </body>
 </html>
